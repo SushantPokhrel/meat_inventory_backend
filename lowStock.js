@@ -1,4 +1,3 @@
-// lowStockCron.js
 import cron from "node-cron";
 import connectDB from "./databaseConnection.js";
 
