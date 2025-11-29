@@ -13,7 +13,7 @@ const checkLowStock = async () => {
 
     if (rows.length) {
       console.log("Low-stock alert:", rows);
-      
+      // any logic for sending mails or reminders
     }
   } catch (err) {
     console.error(err);

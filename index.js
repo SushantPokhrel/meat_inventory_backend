@@ -7,7 +7,7 @@ import cookieParser from "cookie-parser";
 import UserRouter from "./routes/UserRoute.js";
 import ProductRouter from "./routes/ProductRoute.js";
 import db from "./databaseConnection.js";
-import "./lowStock.js"
+// import "./lowStock.js"
 app.use(cors());
 app.use(
   cors({

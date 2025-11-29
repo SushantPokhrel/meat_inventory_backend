@@ -322,7 +322,7 @@ ProductRouter.put("/update/:product_name", verifyToken, async (req, res) => {
 
 // ProductRouter.get("/all",async(req,res)=>{})
 // return alert for low stock and near expiry products
-ProductRouter.get("/check", verifyToken, async (req, res) => {
+ProductRouter.get("/alert", verifyToken, async (req, res) => {
   try {
     if (req.user.role !== "admin" && req.user.role !== "manager") {
       return res.status(403).json({ message: "Forbidden" });
@@ -341,7 +341,7 @@ ProductRouter.get("/check", verifyToken, async (req, res) => {
         .json({ message: "No products are low in stock", products: [] });
     }
 
-    return res.status(200).json({ products: rows });
+    return res.status(200).json({ message: "low stock alert", products: rows });
   } catch (e) {
     console.error(e);
     return res.status(500).json({ message: "Internal server error" });
