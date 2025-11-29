@@ -100,11 +100,11 @@ Create a `.env` file:
 1. Clone
 
 ```bash
-git clone  meat_inventory_backend
+https://github.com/SushantPokhrel/meat_inventory_backend.git
 cd meatinventory
 npm install
 mysql -u root -p
 
 ```
 
-`mysql -u root -p` will prompt for the password you set for root
+`mysql -u root -p` will prompt for the password you set for root in workbench

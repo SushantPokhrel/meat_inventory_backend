@@ -13,7 +13,7 @@ const checkLowStock = async () => {
 
     if (rows.length) {
       console.log("Low-stock alert:", rows);
-      // any logic
+      
     }
   } catch (err) {
     console.error(err);
@@ -23,8 +23,8 @@ const checkLowStock = async () => {
 // Run immediately
 checkLowStock();
 
-// Schedule every 3 hours
-cron.schedule("0 */3 * * *", () => {
+// Schedule every 3min 
+cron.schedule("0 */1 * * * *", () => {
   console.log("Running scheduled low-stock check...");
   checkLowStock();
 });
