@@ -1,0 +1,259 @@
+{
+	"info": {
+		"_postman_id": "c7e3c6a9-b2d0-4587-9483-5ecfad640b3d",
+		"name": "meat_inventory",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36861064"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "first_name",
+							"value": "sushant",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "pok",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "manager1@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "stock_check",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "product_name",
+							"value": "chicken breast",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "category",
+							"value": "chicken",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "unit",
+							"value": "kg",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "price_per_unit",
+							"value": "500",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "deducted_stock",
+							"value": "4",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "added_stock",
+							"value": "10",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/product/alert",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"product",
+						"alert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete prod",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "product_name",
+							"value": "chicken leg piece",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "category",
+							"value": "chicken",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "unit",
+							"value": "kg",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "price_per_unit",
+							"value": "450",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "added_quantity",
+							"value": "4",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/product/delete/chicken leg piece",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"product",
+						"delete",
+						"chicken leg piece"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "first_name",
+							"value": "raju",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "adhikari",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "user@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "54321",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "added_stock",
+							"value": "10",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/product/update/eggs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"product",
+						"update",
+						"eggs"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
