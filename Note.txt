@@ -1,0 +1,1 @@
+For this minimal backend task, I opted to use the mysql2 package for direct MySQL queries instead of an ORM. This decision was made for simplicity and speed, as the task scope is limited, and I have primarily used Mongoose in MERN stack projects for ORM-like functionality.”
